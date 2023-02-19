@@ -1,0 +1,32 @@
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+new_name1 = name1.lower()
+
+new_name2 = name2.lower()
+
+new_t = new_name1.count('t') + new_name2.count('t')
+new_r = new_name1.count('r') + new_name2.count('r')
+new_u = new_name1.count('u') + new_name2.count('u')
+new_e = new_name1.count('e') + new_name2.count('e')
+total_1 = new_t + new_r + new_u + new_e
+
+new_l = new_name1.count('l') + new_name2.count('l')
+new_o = new_name1.count('o') + new_name2.count('o')
+new_v = new_name1.count('v') + new_name2.count('v')
+total_2 = new_l + new_o + new_v + new_e
+
+print(f" \n T occurs {new_t} times \n R occurs {new_r} times \n U occurs {new_u} times \n E occurs {new_e} times \n\n Total = {total_1} \n \n L occurs {new_l} times \n O occurs {new_o} times \n V occurs {new_v} times \n E occurs {new_e} times \n\n Total = {total_2} \n\n\n")
+
+Love_Score = str(total_1) + str(total_2)
+new_love = int(Love_Score)
+
+if new_love < 10 or new_love > 90:
+  print(f"Your score is {Love_Score}, you go together like coke and mentos.")
+
+elif new_love > 40 and new_love < 50:
+  print(f"Your score is {Love_Score},you are alright together.")
+
+else:
+   print(f"Your score is {Love_Score}")
