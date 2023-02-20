@@ -1,0 +1,63 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+
+import random
+
+
+user = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors." ))
+
+list = [rock,paper,scissors]
+user_choice = list[user]
+
+computer = random.choice(list)
+print(f"\n User Chose: \n {user_choice} \n\n Computer Chose: \n {computer}")
+
+if user_choice == computer:
+  print("It is a draw")
+
+elif user_choice == list[0]:
+  if computer == list[1]:
+    print("Paper covers rock! Computer Won!")
+
+  elif computer == list[2]:
+    print("Rock smashes scissors! User Won!")
+
+elif user_choice == list[1]:
+  if computer == list[0]:
+    print("Paper covers rock! User Won!")
+
+  elif computer == list[2]:
+    print("Scissors cuts paper! Computer Won!")
+
+elif user_choice == list[2]:
+  if computer == list[0]:
+    print("Rock smashes scissors! Computer Won")
+
+  elif computer == list[1]:
+    print("Scissors cuts paper! User Won!")
+
